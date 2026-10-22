@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.picovr.permission.SPATIAL_DATA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <application android:name=".platform.SpatialApplication" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_spatial_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_spatial_launcher" android:supportsRtl="true" android:theme="@style/Theme.RoomSplatTheme" tools:targetApi="31">
+        <meta-data android:name="pico.spatial.use_experimental_api" android:value="1" />
+        <activity android:name=".platform.LaunchActivity" android:exported="true" android:theme="@style/Theme.RoomSplatTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="pico.spatial.stage.id" android:value="RoomScanStage" />
+            <meta-data android:name="pico.spatial.stage.style" android:value="1" />
+            <meta-data android:name="pico.spatial.stage.immersion" android:value="0" />
+            <meta-data android:name="pico.spatial.stage.immersion_min" android:value="0" />
+            <meta-data android:name="pico.spatial.stage.immersion_max" android:value="0" />
+        </activity>
+        <meta-data android:name="com.pico.spatial.SPATIAL_APP" android:value="true" />
+        <meta-data android:name="icon.3d.list" android:resource="@array/icon_3d_list" />
+        <meta-data android:name="icon.sdf.list" android:resource="@array/icon_sdf_list" />
+    </application>
+</manifest>

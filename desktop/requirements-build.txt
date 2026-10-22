@@ -1,0 +1,5 @@
+pyinstaller==6.16.0
+pycolmap==3.11.1
+numpy==2.5.3
+setuptools==80.9.0
+Pillow==12.3.0

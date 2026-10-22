@@ -1,0 +1,5 @@
+# Tested with Python 3.12; kept local in room-splat/.python-tools for packaging.
+numpy==2.5.3
+scipy==1.18.1
+scikit-image==0.26.0
+lazy_loader==0.6
